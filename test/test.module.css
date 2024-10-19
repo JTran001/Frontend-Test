@@ -1,4 +1,156 @@
-.container{
-    height: 80vh;
-    background-color: aliceblue;
-}
+/* test.module.css */
+
+/* General styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align towards the top */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px; /* Set a maximum width for desktop */
+  }
+  
+  .input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .inputError {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+  
+  .button {
+    padding: 5px 10px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  .errorMessage {
+    color: red;
+    margin: 5px 0;
+  }
+  
+  .todoList {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px; /* Max width for desktop */
+  }
+  
+  .todoItem {
+    display: flex;
+    justify-content: space-between; /* Space between text and buttons */
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .todoText {
+    flex-grow: 1; /* Makes the text grow to fill available space */
+    margin-right: 10px; /* Add spacing between text and buttons */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Center buttons in a container */
+  .buttonContainer {
+    display: flex; /* Align buttons horizontally */
+    justify-content: flex-end; /* Align to the right */
+  }
+  
+  .deleteButton,
+  .editButton {
+    padding: 5px 8px;
+    background-color: #f44336; /* Red for delete button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .deleteButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  .editButton {
+    background-color: #008CBA; /* Blue for edit button */
+    margin-left: 5px; /* Space between buttons */
+  }
+  
+  .editButton:hover {
+    background-color: #007bb5;
+  }
+  
+  /* Mobile view (below 768px) */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 20px; /* Less margin on smaller screens */
+    }
+  
+    .form {
+      flex-direction: column; /* Stack the input and button vertically */
+      align-items: stretch; /* Stretch to full width */
+      width: 100%; /* Take up full width on mobile */
+      max-width: 100%; /* Remove the max width constraint */
+    }
+  
+    .input {
+      margin-right: 0;
+      margin-bottom: 10px; /* Add space below the input */
+    }
+  
+    .button {
+      width: 100%; /* Make button full-width */
+      padding: 10px; /* Increase padding for larger touch areas */
+    }
+  
+    .todoList {
+      width: 100%; /* Take full width on mobile */
+      max-width: 100%; /* Remove max width for mobile */
+    }
+  
+    .todoItem {
+      flex-direction: column; /* Stack text and buttons vertically */
+      align-items: stretch; /* Stretch each item to full width */
+      text-align: left; /* Align text to the left */
+    }
+  
+    .todoText {
+      margin-right: 0; /* Remove right margin in mobile view */
+      margin-bottom: 10px; /* Add margin below text for spacing */
+    }
+  
+    .editButton,
+    .deleteButton {
+      width: 100%; /* Full width for buttons on mobile */
+      margin-right: 0;
+      margin-bottom: 10px; /* Space between the buttons */
+    }
+  }
