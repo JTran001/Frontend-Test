@@ -139,12 +139,13 @@
     .todoItem {
       flex-direction: column; /* Stack text and buttons vertically */
       align-items: stretch; /* Stretch each item to full width */
-      text-align: left; /* Align text to the left */
+      text-align: center; /* Align text to the left */
     }
   
     .todoText {
       margin-right: 0; /* Remove right margin in mobile view */
       margin-bottom: 10px; /* Add margin below text for spacing */
+      text-align: center; /* Center the text */
     }
   
     .editButton,

@@ -132,7 +132,10 @@ export default function test (): JSX.Element {
               ) : (
                 <>
                   {/* display items in the list and add a edit and delete button to each item */}
-                  {item}
+                  <div className={styles.todoText}>
+                    {item}
+                  </div>
+
                   <div className={styles.buttonContainer}> 
                     <button
                       onClick={() => handleEdit(index)}
